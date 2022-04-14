@@ -23,20 +23,50 @@ function Navbar() {
               Home
             </a>
           </li>
-          <li className="menu-item dropdown"><a className="nav__link"  href="#">About</a>
-                <ul className="sub-nav" >
-                    <li><a className="sub-nav__link" href="#">link 1</a></li>
-                    <li><a className="sub-nav__link" href="#">link 2</a></li>
-                    <li><a className="sub-nav__link" href="#">link 3 - long link - long link - long link</a></li>
-                </ul>
-                </li>
-                <li className="menu-item dropdown"><a className="nav__link"  href="#">Contact</a>
-                <ul className = "sub-nav">
-                    <li><a className="sub-nav__link"  href="#">link 1</a></li>
-                    <li><a className="sub-nav__link"  href="#">link 2</a></li>
-                    <li><a className="sub-nav__link"  href="#">link 3 - long link - long link - long link</a></li>
-                </ul>
-                </li>
+          {/* <li className="menu-item dropdown">
+            <a className="nav__link" href="#">
+              About
+            </a>
+            <ul className="sub-nav">
+              <li>
+                <a className="sub-nav__link" href="#">
+                  link 1
+                </a>
+              </li>
+              <li>
+                <a className="sub-nav__link" href="#">
+                  link 2
+                </a>
+              </li>
+              <li>
+                <a className="sub-nav__link" href="#">
+                  link 3 - long link - long link - long link
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li className="menu-item dropdown">
+            <a className="nav__link" href="#">
+              Contact
+            </a>
+            <ul className="sub-nav">
+              <li>
+                <a className="sub-nav__link" href="#">
+                  link 1
+                </a>
+              </li>
+              <li>
+                <a className="sub-nav__link" href="#">
+                  link 2
+                </a>
+              </li>
+              <li>
+                <a className="sub-nav__link" href="#">
+                  link 3 - long link - long link - long link
+                </a>
+              </li>
+            </ul>
+          </li> */}
           <li className="menu-item ">
             <a className="nav__link" href="#">
               List Produk
@@ -48,9 +78,7 @@ function Navbar() {
   );
 
   function showMenu() {
-    return(
-      document.body.classList.toggle("menu-active")
-    );
+    return document.body.classList.toggle("menu-active");
   }
 }
 

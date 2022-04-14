@@ -235,11 +235,13 @@ body {
   height: 513px;
   float: left;
   margin-left: 30px;
+  margin-right: 30px;
   display: flex;
   align-items: center;
 }
 
 .deskripsi .info {
+  text-align: justify;
   line-height: 1.8;
   color: rgb(18, 11, 49);
 }
