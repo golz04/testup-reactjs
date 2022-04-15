@@ -20,10 +20,12 @@ function App() {
       <div className="parentBox">
         <Gambar image="assets/image/bmw-1.png" alter="foto-produk-1" />
         <Deskripsi category="Mobil" title="BMW Ni Bos" isDiscount="true" price="Rp.123.456.00,-" desc="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat libero nemo placeat sit, vel eum atque voluptates, minus blanditiis nulla mollitia ratione. Laudantium, eligendi. Nobis sit placeat totam asperiores cum." />
+        <Reviews />
       </div>
       <div className="parentBox">
         <Deskripsi category="Mobil" title="BMW Ni Sam" isDiscount="false" price="Rp.123.456.00,-" desc="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat libero nemo placeat sit, vel eum atque voluptates, minus blanditiis nulla mollitia ratione. Laudantium, eligendi. Nobis sit placeat totam asperiores cum." />
         <Gambar image="assets/image/bmw-2.png" alter="foto-produk-2" />
+        <Reviews />
       </div>
       <div className="parentBox">
         <Gambar image="assets/image/bmw-3.png" alter="foto-produk-3" />
@@ -46,6 +48,43 @@ function App() {
     );
   }
 
+  function Reviews() {
+    const userReview = [
+      {
+        "id": 1,
+        "name": "Muhammad Haidar",
+        "feedback": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque suscipit praesentium sed velit totam corrupti, fuga nesciunt. Exercitationem laudantium iste quis voluptas at. Blanditiis quasi voluptate iusto. Sit, expedita quisquam.",
+      },
+      {
+        "id": 2,
+        "name": "Gavriel Ijlal",
+        "feedback": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque suscipit praesentium sed velit totam corrupti, fuga nesciunt. Exercitationem laudantium iste quis voluptas at. Blanditiis quasi voluptate iusto. Sit, expedita quisquam.",
+      },
+      {
+        "id": 3,
+        "name": "Rizqi Dayat",
+        "feedback": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque suscipit praesentium sed velit totam corrupti, fuga nesciunt. Exercitationem laudantium iste quis voluptas at. Blanditiis quasi voluptate iusto. Sit, expedita quisquam.",
+      },
+    ];
+
+    const listReview = userReview.map((e) =>
+      <div className="item">
+        <img src="assets/avatar/batman.png" alt="avatar.png" />
+        <div className="user">
+          <h3>{e.name}</h3>
+          <p>{e.feedback}</p>
+        </div>
+      </div>
+    );
+
+    return(
+      <div className="reviewBox">
+        <h2>Review</h2>
+        {listReview}
+      </div>
+    );
+  }
+
   function Deskripsi(props) {
     const {category, title, price, desc, isDiscount} = props;
     const benefits = ['Catnya Bagus', 'Mobil Mewah Pastinya', 'Keren Juga Lur'];
@@ -55,19 +94,19 @@ function App() {
 
     return (
       <div className="deskripsi">
-          <div>
-            <p className="cate">{category}</p>
-            <h1 className="title">{title}</h1>
-            <Diskon isDiscount={isDiscount} />
-            <p className="price">{price}</p>
-            <p className="info">{desc}</p>
-            <ul>
-              {listBenefits}
-            </ul>
-            <br />
-            <button onClick={(e) => Buy({title, price, e})} className="buy">Beli</button>
-          </div>
+        <div>
+          <p className="cate">{category}</p>
+          <h1 className="title">{title}</h1>
+          <Diskon isDiscount={isDiscount} />
+          <p className="price">{price}</p>
+          <p className="info">{desc}</p>
+          <ul>
+            {listBenefits}
+          </ul>
+          <br />
+          <button onClick={(e) => Buy({title, price, e})} className="buy">Beli</button>
         </div>
+      </div>
     );
   }
 

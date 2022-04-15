@@ -556,3 +556,34 @@ footer#site-footer #footer-social-buttons img:hover {
         margin-top: 1.32rem;
     }
 }
+
+.reviewBox {
+  clear: both;
+  width: 99%;
+  overflow: hidden;
+  padding: 10px 25px;
+}
+
+
+.reviewBox img {
+  margin-top: 7px;
+  width: 80px;
+  height: 80px;
+  background-color: #b1b1b1;
+  border-radius: 10px;
+  float: left;
+  margin-right: 15px;
+}
+
+.reviewBox .user h3 {
+  margin-top: 10px;
+}
+
+.reviewBox .user p{
+  margin-top: -10px;
+}
+
+.reviewBox .item {
+  width: 100%;
+  overflow: hidden;
+}
